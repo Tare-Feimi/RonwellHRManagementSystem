@@ -1,0 +1,31 @@
+﻿@model IEnumerable<RonwellHR.Application.Trainings.Models.TrainingSessionDto>
+@{
+    ViewData["Title"] = "Training Sessions";
+}
+<h2>Training Sessions</h2>
+@if (Model != null && Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Session ID</th>
+                <th>Topic</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var session in Model)
+            {
+                <tr>
+                    <td>@session.TrainingSessionId</td>
+                    <td>@session.Topic</td>
+                    <td>@session.Date</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No training sessions scheduled.</p>
+}

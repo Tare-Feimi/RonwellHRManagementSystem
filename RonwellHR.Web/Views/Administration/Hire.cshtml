@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Hire Employee";
+}
+<h2>Hire Employee</h2>
+<form asp-action="Hire" method="post">
+    <div class="form-group">
+        <label for="employeeId">Employee ID</label>
+        <input type="number" name="employeeId" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="hireDate">Hire Date</label>
+        <input type="date" name="hireDate" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Hire</button>
+</form>

@@ -1,0 +1,30 @@
+﻿@model IEnumerable<RonwellHR.Application.Employees.Models.EmployeeDto>
+@{
+    ViewData["Title"] = "Employees";
+}
+
+<h2>Employees</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Employee Id</th>
+            <th>Full Name</th>
+            <th>Qualification</th>
+            <th>Skills</th>
+            <th>Experience</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.EmployeeId</td>
+                <td>@employee.FullName</td>
+                <td>@employee.Qualification</td>
+                <td>@employee.Skills</td>
+                <td>@employee.Experience</td>
+            </tr>
+        }
+    </tbody>
+</table>

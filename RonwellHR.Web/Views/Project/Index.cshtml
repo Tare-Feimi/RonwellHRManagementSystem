@@ -1,0 +1,35 @@
+﻿@model IEnumerable<RonwellHR.Application.Projects.Models.ProjectDto>
+@{
+    ViewData["Title"] = "Projects";
+}
+<h2>Project Management</h2>
+@if (Model != null && Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Project ID</th>
+                <th>Project Name</th>
+                <th>Description</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var project in Model)
+            {
+                <tr>
+                    <td>@project.ProjectId</td>
+                    <td>@project.ProjectName</td>
+                    <td>@project.Description</td>
+                    <td>@project.StartDate</td>
+                    <td>@project.EndDate</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No projects found.</p>
+}

@@ -1,0 +1,23 @@
+﻿@model RonwellHR.Application.Trainings.Commands.ScheduleTrainingSessionCommand
+@{
+    ViewData["Title"] = "Schedule Training Session";
+}
+<h2>Schedule Training Session</h2>
+<form asp-action="Schedule" method="post">
+    <div class="form-group">
+        <label asp-for="Topic"></label>
+        <input asp-for="Topic" class="form-control" />
+        <span asp-validation-for="Topic" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Date"></label>
+        <input asp-for="Date" type="date" class="form-control" />
+        <span asp-validation-for="Date" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="EmployeeId"></label>
+        <input asp-for="EmployeeId" type="number" class="form-control" />
+        <span asp-validation-for="EmployeeId" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Schedule</button>
+</form>
